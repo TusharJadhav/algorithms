@@ -31,13 +31,14 @@ All the algorithms and data structures have been implemented as a shared library
 ## Mac OS X Requirements
 
 * Mac OS X Lion or newer
-* Xcode Developer Tools or gcc compiler version supporting at least C++11 standard.
+* Xcode Developer Tools or gcc compiler supporting at least C++11 standard.
 * [CMake](https://cmake.org/) v2.6.4 or newer
 
 ## Issues
-Please feel free to [create an issue](https://github.com/TusharJadhav/algorithms/issues/new) in order to request any particular feature and/ or algorithm/ data structure that you to be implemented.
+Please feel free to [create an issue](https://github.com/TusharJadhav/algorithms/issues/new) in order to submit a bug or request any particular feature and/ or algorithm/ data structure that you to be implemented.
 
 ## Contributing Code
 Patches are welcome. Please feel free to submit a pull request and I will review it as soon as I can. The only requirement is that all existing unit tests should be running successfully with your patch. So please run them before submitting the patch.
 
-Note: Since most of the machine these days are 64 bit, pass -DCMAKE_GENERATOR_PLATFORM=x64 parameter to CMake in order to generate Visual Studio projects with 64 bit configuration pre-defined.
+## Note for Windows build
+Since most of the machine these days are 64 bit, pass -DCMAKE_GENERATOR_PLATFORM=x64 parameter to CMake in order to generate Visual Studio projects with 64 bit configuration pre-defined.
