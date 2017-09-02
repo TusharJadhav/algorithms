@@ -1,6 +1,6 @@
 #ifndef INCLUDE_ALGORITHMS_QUICK_UNION_WITH_PATH_COMPRESSION_H_
 #define INCLUDE_ALGORITHMS_QUICK_UNION_WITH_PATH_COMPRESSION_H_
-
+#include "DLLDefines.h"
 #include <vector>
 #include <stddef.h>
 
@@ -14,11 +14,11 @@ Thus in theory, this algorithm is not quite linear but in practice it is.
 namespace algorithms {
   class QuickUnionWithPathCompression {
     public:
-      QuickUnionWithPathCompression(size_t no_of_elements);
-      ~QuickUnionWithPathCompression() = default;
+      MYLIB_EXPORT QuickUnionWithPathCompression(size_t no_of_elements);
+      MYLIB_EXPORT ~QuickUnionWithPathCompression() = default;
 
-      void Union(size_t elementA, size_t elementB);
-      bool Connected(size_t elementA, size_t elementB);
+      MYLIB_EXPORT void Union(size_t elementA, size_t elementB);
+      MYLIB_EXPORT bool Connected(size_t elementA, size_t elementB);
 
     private:
       size_t GetRoot(size_t element);
