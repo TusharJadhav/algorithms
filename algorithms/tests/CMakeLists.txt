@@ -31,6 +31,6 @@ if (CMAKE_VERSION VERSION_LESS 2.8.11)
 endif()
 
 # Trivial example using gtest and gmock
-add_executable(recency_map_test recency_map_test.cc)
-target_link_libraries(recency_map_test gtest gmock_main algorithms)
+#add_executable(recency_map_test recency_map_test.cc)
+#target_link_libraries(recency_map_test gtest gmock_main algorithms)
 
