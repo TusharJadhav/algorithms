@@ -4,6 +4,7 @@ include_directories(
 
 set(SRCS
   ${CMAKE_CURRENT_SOURCE_DIR}/src/recency_map.cc
+  ${CMAKE_CURRENT_SOURCE_DIR}/src/quick_union_with_path_compression.cc
 )
 
 add_library(algorithms SHARED ${SRCS})
