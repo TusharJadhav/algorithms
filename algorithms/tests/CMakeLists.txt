@@ -34,3 +34,6 @@ endif()
 add_executable(quick_union_with_path_compression_tests quick_union_with_path_compression_tests.cc)
 target_link_libraries(quick_union_with_path_compression_tests gtest gmock_main algorithms)
 
+add_executable(link_list_tests link_list_tests.cc)
+target_link_libraries(link_list_tests gtest gmock_main algorithms)
+
