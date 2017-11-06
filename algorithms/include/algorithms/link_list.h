@@ -1,6 +1,5 @@
 #ifndef INCLUDE_ALGORITHMS_LINK_LIST_H_
 #define INCLUDE_ALGORITHMS_LINK_LIST_H_
-#include "DLLDefines.h"
 #include <memory>
 #include <stdexcept>
 
@@ -16,12 +15,12 @@ namespace algorithms {
   public:
     typedef _tp value_type;
 
-    MYLIB_EXPORT void Push_Front(const value_type& val) {
+    void Push_Front(const value_type& val) {
       auto node = std::make_unique<Node>(val, std::move(root_));
       root_ =  std::move(node);
     }
 
-    MYLIB_EXPORT void Pop_Front() {
+    void Pop_Front() {
       if(root_ == nullptr)
         throw std::underflow_error("Popping element from an empty link list");
 
@@ -30,21 +29,21 @@ namespace algorithms {
       oldRoot.release();
     }
 
-    MYLIB_EXPORT value_type& Front() {
+    value_type& Front() {
       if(!root_)
         throw std::underflow_error("Trying to access front  element from an empty link list");
 
       return root_->data_;
     }
 
-    MYLIB_EXPORT const value_type& Front() const {
+    const value_type& Front() const {
       if(root_)
         throw std::underflow_error("Trying to access front  element from an empty link list");
 
       return root_->data_;
     }
 
-    MYLIB_EXPORT bool Empty() const {
+    bool Empty() const {
       return root_ == nullptr;
     }
 
