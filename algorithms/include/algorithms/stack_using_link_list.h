@@ -29,11 +29,11 @@ namespace algorithms {
     }
 
     value_type& Top() {
-      data_.Front();
+      return data_.Front();
     }
 
     const value_type& Top() const {
-      data_.Front();
+      return data_.Front();
     }
 
     size_t Size() const {
