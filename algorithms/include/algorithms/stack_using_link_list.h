@@ -2,6 +2,7 @@
 #define INCLUDE_ALGORITHMS_STACK_USING_LINK_LIST_H_
 #include "stack_interface.h"
 #include <memory>
+#include <stdexcept>
 #include "link_list.h"
 
 /*
@@ -24,15 +25,24 @@ namespace algorithms {
     }
 
     void Pop() {
+      if(Empty())
+        throw std::underflow_error("Trying to pop an element from an empty stack");
+
       data_.Pop_Front();
       --size_;
     }
 
     value_type& Top() {
+      if(Empty())
+        throw std::underflow_error("Trying to access top element from an empty stack");
+      
       return data_.Front();
     }
 
     const value_type& Top() const {
+      if(Empty())
+        throw std::underflow_error("Trying to access top element from an empty stack");
+
       return data_.Front();
     }
 
