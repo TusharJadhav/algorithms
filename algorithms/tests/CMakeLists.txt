@@ -39,3 +39,7 @@ target_link_libraries(link_list_tests gtest gmock_main algorithms)
 
 add_executable(stack_using_link_list_tests stack_using_link_list_tests.cc)
 target_link_libraries(stack_using_link_list_tests gtest gmock_main algorithms)
+
+add_executable(stack_using_resizing_array_tests stack_using_resizing_array_tests.cc)
+target_link_libraries(stack_using_resizing_array_tests gtest gmock_main algorithms)
+
