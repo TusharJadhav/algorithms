@@ -25,8 +25,8 @@ namespace algorithms {
         throw std::underflow_error("Popping element from an empty link list");
 
       auto oldRoot = std::move(root_);
-      root_ = oldRoot->next_ ? std::move(oldRoot->next_) : nullptr;
-      oldRoot.release();
+      root_ = std::move(oldRoot->next_);
+      oldRoot.reset();
     }
 
     value_type& Front() {
