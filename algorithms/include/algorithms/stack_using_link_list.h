@@ -6,10 +6,7 @@
 #include "singly_link_list.h"
 
 /*
-This algorithm "Quick Union With Path Compression" solves the dynamic connectivity problem.
-Starting from an empty data structure, any sequence of M union-find ops on N objects makes ≤ c ( N + M lg* N ) array accesses.
-In reality log * function can be considered to be at the most 5.
-Thus in theory, this algorithm is not quite linear but in practice it is.
+This class is an implementation of Stack data structure using link list internally
 */
 
 namespace algorithms {
