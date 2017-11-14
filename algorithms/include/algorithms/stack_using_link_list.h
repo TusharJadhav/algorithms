@@ -3,7 +3,7 @@
 #include "stack_interface.h"
 #include <memory>
 #include <stdexcept>
-#include "link_list.h"
+#include "singly_link_list.h"
 
 /*
 This algorithm "Quick Union With Path Compression" solves the dynamic connectivity problem.
@@ -55,7 +55,7 @@ namespace algorithms {
     }
 
   private:
-    LinkList<value_type> data_;
+    SinglyLinkList<value_type> data_;
     size_t size_{0};
   };
 }

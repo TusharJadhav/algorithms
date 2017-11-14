@@ -11,7 +11,7 @@ list
 
 namespace algorithms {
   template<typename _tp>
-  class LinkList {
+  class SinglyLinkList {
   public:
     typedef _tp value_type;
 

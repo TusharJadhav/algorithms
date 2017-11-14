@@ -1,18 +1,18 @@
 #include "gtest/gtest.h"
 #include "gmock/gmock.h"
-#include "link_list.h"
+#include "singly_link_list.h"
 #include <string>
 
 using namespace testing;
 using namespace algorithms;
 
-TEST(LinkListTests, TestInitiallEmpty) {
-  LinkList<int> list;
+TEST(SinglyLinkListTests, TestInitiallEmpty) {
+  SinglyLinkList<int> list;
   EXPECT_TRUE(list.Empty()) << "Initially the link list is supposed to be empty";
 }
 
-TEST(LinkListTests, TestAddingAndRemovingElements) {
-  LinkList<int> list;
+TEST(SinglyLinkListTests, TestAddingAndRemovingElements) {
+  SinglyLinkList<int> list;
   list.Push_Front(10);
   list.Push_Front(20);
   list.Push_Front(30);
@@ -31,15 +31,15 @@ TEST(LinkListTests, TestAddingAndRemovingElements) {
   list.Pop_Front();
 }
 
-TEST(LinkListTests, TestNonEmpty) {
-  LinkList<std::string> list;
+TEST(SinglyLinkListTests, TestNonEmpty) {
+  SinglyLinkList<std::string> list;
   list.Push_Front("Hi");
 
   ASSERT_EQ(list.Empty(), false) << "List list is empty after pushing one element";
 }
 
-TEST(LinkListTests, TestEmpty) {
-  LinkList<std::string> list;
+TEST(SinglyLinkListTests, TestEmpty) {
+  SinglyLinkList<std::string> list;
   list.Push_Front("Hello");
   list.Push_Front("World");
 
@@ -49,13 +49,13 @@ TEST(LinkListTests, TestEmpty) {
   ASSERT_EQ(list.Empty(), true) << "List is not empty after removing all elements";
 }
 
-TEST(LinkListTests, TestPoppingFromEmptyList) {
-  LinkList<int> list;
+TEST(SinglyLinkListTests, TestPoppingFromEmptyList) {
+  SinglyLinkList<int> list;
   ASSERT_THROW(list.Pop_Front(), std::underflow_error) << "Popping from an empty list did not throw an exception";
 }
 
-TEST(LinkListTests, TestAccessingFrontElementFromEmptyList) {
-  LinkList<double> list;
+TEST(SinglyLinkListTests, TestAccessingFrontElementFromEmptyList) {
+  SinglyLinkList<double> list;
   ASSERT_THROW(list.Front(), std::underflow_error) << "Accessing front element from an empty list did not throw an exception"; 
 }
 
