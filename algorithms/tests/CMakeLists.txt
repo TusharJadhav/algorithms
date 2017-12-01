@@ -54,3 +54,6 @@ target_link_libraries(queue_using_resizing_array_tests gtest gmock_main algorith
 
 add_executable(selection_sort_tests selection_sort_tests.cc)
 target_link_libraries(selection_sort_tests gtest gmock_main algorithms)
+
+add_executable(insertion_sort_tests insertion_sort_tests.cc)
+target_link_libraries(insertion_sort_tests gtest gmock_main algorithms)
