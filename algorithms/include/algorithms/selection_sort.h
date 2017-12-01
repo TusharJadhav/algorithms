@@ -7,7 +7,7 @@
 
 /*
 This class implements sorting of elements using selection sort algorithm
-The time complexity to sort is quadratic and is insensitive to input, which
+The time complexity to sort is quadratic (N2/4) and is insensitive to input, which
 mean that the algorithm will take quadratic time even if the input is sorted.
 
 However the data movement is minimal. The algorithm does linear number of swaps
