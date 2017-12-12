@@ -8,12 +8,14 @@
 #include "insertion_sort.h"
 
 /*
-This class implements sorting of elements using selection sort algorithm
-The time complexity to sort is quadratic (N2/4) and is insensitive to input, which
-mean that the algorithm will take quadratic time even if the input is sorted.
+This class implements sorting of elements using merge sort algorithm
+The time complexity to sort is N log N, which is optima, however, 
+the algorithm requires an auxillary array equal to the size of elements
+to be sorted.
+Specifically merge sort uses N log N compares and 6 N log N array accesses
+to sort an array of size N.
 
-However the data movement is minimal. The algorithm does linear number of swaps
-to sort the elements. Each element is moved into its final position once.
+merge sort algorithm is not stable since it does large distance swaps.
 */
 
 namespace algorithms {
@@ -21,7 +23,7 @@ namespace algorithms {
   class MergeSort : public SortInterface<_tp> {
     private:
      static const int CUTOFF = 7;
-     
+
     public:
       typedef _tp value_type;
 
