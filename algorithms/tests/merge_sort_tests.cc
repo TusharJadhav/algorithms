@@ -10,7 +10,7 @@
 using namespace testing;
 using namespace algorithms;
 
-TEST(StackUsingLinkListTests, TestArrayOfIntegers) {
+TEST(MergeSortTests, TestArrayOfIntegers) {
   std::vector<int> elements{ 5,3,7,8,0,4,2 };
   auto elements_copy{ elements };
 
@@ -42,7 +42,7 @@ TEST(StackUsingLinkListTests, TestArrayOfIntegers) {
   }
 }
 
-TEST(StackUsingLinkListTests, TestRandomArrayOfIntegers) {
+TEST(MergeSortTests, TestRandomArrayOfIntegers) {
   srand(time(NULL));
   size_t size = (rand() % 500) + 1;
   std::vector<int> elements(size);
@@ -80,7 +80,7 @@ TEST(StackUsingLinkListTests, TestRandomArrayOfIntegers) {
   }
 }
 
-TEST(StackUsingLinkListTests, TestArrayOfStrings) {
+TEST(MergeSortTests, TestArrayOfStrings) {
   std::vector<std::string> elements{ "Hi", "this", "algorithm", "should", "work", "string", "random" };
   auto elements_copy{ elements };
 
@@ -112,7 +112,7 @@ TEST(StackUsingLinkListTests, TestArrayOfStrings) {
   }
 }
 
-TEST(StackUsingLinkListTests, TestArrayOfDoubles) {
+TEST(MergeSortTests, TestArrayOfDoubles) {
   std::vector<double> elements{ 0.2, 1.6, 1.5, 0.1, 0.001, 0.301 };
   auto elements_copy{ elements };
 
@@ -144,7 +144,7 @@ TEST(StackUsingLinkListTests, TestArrayOfDoubles) {
   }
 }
 
-TEST(StackUsingLinkListTests, TestArrayOfIntegersInDecendingOrder) {
+TEST(MergeSortTests, TestArrayOfIntegersInDecendingOrder) {
   std::vector<int> elements{ 5,3,7,8,0,4,2 };
   auto elements_copy{ elements };
 

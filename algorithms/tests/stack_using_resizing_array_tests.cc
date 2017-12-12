@@ -6,17 +6,17 @@
 using namespace testing;
 using namespace algorithms;
 
-TEST(StackUsingLinkListTests, TestInitiallEmpty) {
+TEST(StackUsingResizingArrayTests, TestInitiallEmpty) {
     StackUsingResizingArray<int> my_stack;
     EXPECT_TRUE(my_stack.Empty()) << "Initially the stack is supposed to be empty";
 }
 
-TEST(StackUsingLinkListTests, TestInitialSizeZero) {
+TEST(StackUsingResizingArrayTests, TestInitialSizeZero) {
     StackUsingResizingArray<int> my_stack;
     EXPECT_EQ(my_stack.Size(), 0) << "Initially the stack size should be zero since there are no elements pushed onto it";
 }
 
-TEST(StackUsingLinkListTests, TestPushPopAndTopOperations) {
+TEST(StackUsingResizingArrayTests, TestPushPopAndTopOperations) {
     StackUsingResizingArray<int> my_stack;
     my_stack.Push(10);
     my_stack.Push(20);
@@ -38,7 +38,7 @@ TEST(StackUsingLinkListTests, TestPushPopAndTopOperations) {
     ASSERT_EQ(my_stack.Top(), 10) << "Top element is not correct";
 }
 
-TEST(StackUsingLinkListTests, TestNonEmpty) {
+TEST(StackUsingResizingArrayTests, TestNonEmpty) {
     StackUsingResizingArray<int> my_stack;
     my_stack.Push(10);
     my_stack.Push(20);
@@ -47,7 +47,7 @@ TEST(StackUsingLinkListTests, TestNonEmpty) {
     EXPECT_FALSE(my_stack.Empty()) << "Stack is empty after pushing few elements";
 }
 
-TEST(StackUsingLinkListTests, TestEmpty) {
+TEST(StackUsingResizingArrayTests, TestEmpty) {
   StackUsingResizingArray<std::string> my_stack;
   my_stack.Push("Hi");
   my_stack.Push("Hello");
@@ -58,7 +58,7 @@ TEST(StackUsingLinkListTests, TestEmpty) {
   EXPECT_TRUE(my_stack.Empty()) << "Stack is not empty after popping all elements";
 }
 
-TEST(StackUsingLinkListTests, TestSizeAfterPushPopOperations) {
+TEST(StackUsingResizingArrayTests, TestSizeAfterPushPopOperations) {
   StackUsingResizingArray<int> my_stack;
   
   my_stack.Push(100);
@@ -82,12 +82,12 @@ TEST(StackUsingLinkListTests, TestSizeAfterPushPopOperations) {
   ASSERT_EQ(my_stack.Size(), 0) << "Stack size is incorrect";
 }
 
-TEST(StackUsingLinkListTests, TestPoppingFromEmptyStack) {
+TEST(StackUsingResizingArrayTests, TestPoppingFromEmptyStack) {
   StackUsingResizingArray<int> my_stack;
   ASSERT_THROW(my_stack.Pop(), std::underflow_error) << "Popping from an stack  did not throw an exception";
 }
 
-TEST(StackUsingLinkListTests, TestAccessingFrontElementFromEmptyList) {
+TEST(StackUsingResizingArrayTests, TestAccessingFrontElementFromEmptyList) {
   StackUsingResizingArray<double> my_stack;
   ASSERT_THROW(my_stack.Top(), std::underflow_error) << "Accessing top element from an empty stack did not throw an exception"; 
 }

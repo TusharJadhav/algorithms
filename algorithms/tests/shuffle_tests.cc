@@ -9,7 +9,7 @@
 using namespace testing;
 using namespace algorithms;
 
-TEST(StackUsingLinkListTests, TestShufflingOfIntegers) {
+TEST(ShuffleTests, TestShufflingOfIntegers) {
   std::vector<int> elements{10, 20, 30, 40, 50, 60, 70, 80, 90, 100};
   std::vector<int> orignal_elements{elements};
   std::unordered_multiset<int> dict(elements.cbegin(), elements.cend());
@@ -48,7 +48,7 @@ TEST(StackUsingLinkListTests, TestShufflingOfIntegers) {
     FAIL() << "After shuffling the elements, all the elements position is unchanged";
 }
 
-TEST(StackUsingLinkListTests, TestShufflingOfRandomIntegers) {
+TEST(ShuffleTests, TestShufflingOfRandomIntegers) {
   srand(time(NULL));
   size_t no_of_elements = (rand() % 500) + 1;
   std::vector<int> elements(no_of_elements);
