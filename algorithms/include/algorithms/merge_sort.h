@@ -9,7 +9,7 @@
 
 /*
 This class implements sorting of elements using merge sort algorithm
-The time complexity to sort is N log N, which is optima, however, 
+The time complexity to sort is N log N, which is optimal, however, 
 the algorithm requires an auxillary array equal to the size of elements
 to be sorted.
 Specifically merge sort uses N log N compares and 6 N log N array accesses
