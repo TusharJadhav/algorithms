@@ -64,4 +64,5 @@ target_link_libraries(shell_sort_tests gtest gmock_main algorithms)
 add_executable(shuffle_tests shuffle_tests.cc)
 target_link_libraries(shuffle_tests gtest gmock_main algorithms)
 
-
+add_executable(merge_sort_tests merge_sort_tests.cc)
+target_link_libraries(merge_sort_tests gtest gmock_main algorithms)
