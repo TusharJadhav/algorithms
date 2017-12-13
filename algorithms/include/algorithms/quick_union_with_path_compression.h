@@ -24,7 +24,7 @@ namespace algorithms {
       size_t GetRoot(size_t element);
 
       inline bool IsIdInBounds(size_t element) {
-        return element >= 0 && element < id_.size();
+        return element < id_.size();
       }
 
     private:
