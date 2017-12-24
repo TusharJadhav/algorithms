@@ -7,7 +7,7 @@
 #include "priority_queue.h"
 
 /*
-This class implements base Priority Queue implementation where insertion and deletion operations
+This class implements base Minimum Priority Queue implementation where insertion and deletion operations
 are performed in logarithmic time
 */
 
