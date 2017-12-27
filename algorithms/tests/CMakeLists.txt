@@ -73,6 +73,9 @@ target_link_libraries(merge_sort_bottom_up_tests gtest gmock_main algorithms)
 add_executable(quick_sort_tests quick_sort_tests.cc)
 target_link_libraries(quick_sort_tests gtest gmock_main algorithms)
 
+add_executable(three_way_quick_sort_tests three_way_quick_sort_tests.cc)
+target_link_libraries(three_way_quick_sort_tests gtest gmock_main algorithms)
+
 add_executable(min_priority_queue_tests min_priority_queue_tests.cc)
 target_link_libraries(min_priority_queue_tests gtest gmock_main algorithms)
 
