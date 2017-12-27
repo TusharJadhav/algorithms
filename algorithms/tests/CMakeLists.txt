@@ -76,3 +76,5 @@ target_link_libraries(quick_sort_tests gtest gmock_main algorithms)
 add_executable(min_priority_queue_tests min_priority_queue_tests.cc)
 target_link_libraries(min_priority_queue_tests gtest gmock_main algorithms)
 
+add_executable(max_priority_queue_tests max_priority_queue_tests.cc)
+target_link_libraries(max_priority_queue_tests gtest gmock_main algorithms)
