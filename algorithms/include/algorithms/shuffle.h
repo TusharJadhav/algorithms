@@ -17,7 +17,7 @@ namespace algorithms {
       typedef _tp value_type;
 
       static void ShuffleElements(std::vector<value_type>& elements) {
-        srand(time(NULL));
+        srand(static_cast<unsigned int>(time(NULL)));
 
         for(size_t index = 0; index < elements.size(); ++index) {
           auto random_index = (rand() % elements.size());

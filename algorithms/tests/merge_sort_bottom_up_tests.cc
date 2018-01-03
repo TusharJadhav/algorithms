@@ -43,7 +43,7 @@ TEST(MergeSortBottomUpTests, TestArrayOfIntegers) {
 }
 
 TEST(MergeSortBottomUpTests, TestRandomArrayOfIntegers) {
-  srand(time(NULL));
+  srand(static_cast<unsigned int>(time(NULL)));
   size_t size = (rand() % 500) + 1;
   std::vector<int> elements(size);
   for (size_t index = 0; index < size; ++index) {

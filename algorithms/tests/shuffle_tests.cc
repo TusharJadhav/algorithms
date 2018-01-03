@@ -49,7 +49,7 @@ TEST(ShuffleTests, TestShufflingOfIntegers) {
 }
 
 TEST(ShuffleTests, TestShufflingOfRandomIntegers) {
-  srand(time(NULL));
+  srand(static_cast<unsigned int>(time(NULL)));
   size_t no_of_elements = (rand() % 500) + 1;
   std::vector<int> elements(no_of_elements);
 

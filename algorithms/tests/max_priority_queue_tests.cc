@@ -91,7 +91,7 @@ TEST(MaxPriorityQueueTests, TestWithCustomClassAndComparator) {
 }
 
 TEST(MaxPriorityQueueTests, TestWithRandomGeneratedElements) {
-  srand(time(NULL));
+  srand(static_cast<unsigned int>(time(NULL)));
   size_t size = (rand() % 5000) + 1;
   std::vector<int> elements(size);
   for (size_t index = 0; index < size; ++index) {
