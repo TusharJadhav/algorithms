@@ -84,3 +84,6 @@ target_link_libraries(max_priority_queue_tests gtest gmock_main algorithms)
 
 add_executable(heap_sort_tests heap_sort_tests.cc)
 target_link_libraries(heap_sort_tests gtest gmock_main algorithms)
+
+add_executable(binary_search_tree_tests binary_search_tree_tests.cc)
+target_link_libraries(binary_search_tree_tests gtest gmock_main algorithms)
