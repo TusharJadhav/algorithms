@@ -50,7 +50,7 @@ namespace algorithms {
       }
 
       bool Contains(const value_type& value){
-        Contains(root_.get(), value);
+        return Contains(root_.get(), value);
       }
 
       bool IsEmpty(){
